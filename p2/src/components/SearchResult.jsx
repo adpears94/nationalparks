@@ -10,11 +10,9 @@ import '../css/ParkDetails.css'
 export const ParkDetails = () => {
     const { allParks, setAllParks, parkDetails, setParkDetails } = useContext(AppContext);
   
-  return(
- 
+  return( 
      <div>
         {allParks.map()}
-      </div> 
-    
+      </div>     
   )
 }

@@ -1,0 +1,65 @@
+body{
+    margin: 0;    
+    background-image: url("https://media.cntraveler.com/photos/6144cf745c18454812514e86/master/w_2580%2Cc_limit/Best%2520National%2520Parks%2520in%2520the%2520US_Great%2520Smoky%2520Mountains%2520National%2520Park_GettyImages-580749949.jpg");
+}
+.content {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    padding-top:30vh;
+    border: 0;
+    border-radius: 5px;
+    font-size: 18px;   
+    width: 100vw; 
+    height: 68vh;
+}
+#h1 {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 80px;
+    margin: 0;
+}
+
+.wrapper {
+    width: 550px;
+}
+.searchBar{
+   width: 100%;
+   border-radius: 5px;
+}
+.searchInput{
+    
+    height:55px;
+    width:100%;
+    outline:none;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.autoBoxRollOut{
+    background: #fff;
+    max-height: 280px;
+    overflow-y: auto
+}
+.autoBoxRollOut :hover{
+    background:#898989
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.dataResult {
+    color: #0060B6;
+    text-decoration: none;
+    list-style: none;
+    cursor: default;
+    border-radius: 3px;
+    width: 100%;
+}
+.sidebar{
+    height: 100vh;
+    width:0;
+    top:0;
+    left:0;
+    z-index: 1;
+    position: fixed;
+}

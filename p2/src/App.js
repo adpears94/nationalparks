@@ -1,31 +1,34 @@
 import './css/App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import React, { useState, useEffect,  useContext } from 'react';
 import { AppContext } from './AppContext';
-import { HomePage } from './components/HomePage';
+import { HomePage } from './components/HomePage'; 
 import { ParkResults } from './components/ParkResults';
-
+import { Resources } from './components/Resources';
 
 const App = () => {
   const [allParks, setAllParks ] = useState([])
   const [ parkDetails, setparkDetails ] = useState([]);
 
-//GGEZ
-//
-  // useEffect(() => {
-  //   let url = `http://localhost:3001/findMovies?search=${moviesSearch}`
-  //   fetch(url)
+  const getParkData = async () => {
+    try {
+       const res = await fetch('https://developer.nps.gov/api/v1/parks?limit=500&api_key=9xMD2mRaCUV6aEHYNCvehL3PQuHfG3GNTaEhsgJx')
+       const parkData = await res.json();
+       setAllParks(parkData.data)
+       } catch (err) {
+          console.log(err);
+       }
+    }
+
+  useEffect(() => {
+      getParkData()
+ },[])
+
+  // useEffect( () => {
+  //   fetch('https://developer.nps.gov/api/v1/parks?limit=500&api_key=9xMD2mRaCUV6aEHYNCvehL3PQuHfG3GNTaEhsgJx')
   //   .then(res => res.json())
-  //   .then(data => setMovies(data))
-  // }, [moviesSearch])
-
-
-  useEffect( () => {
-    fetch('https://developer.nps.gov/api/v1/parks?limit=500&api_key=9xMD2mRaCUV6aEHYNCvehL3PQuHfG3GNTaEhsgJx')
-    //fetch('https://1a675692-03cd-4f75-aee2-473321d089b7.mock.pstmn.io')
-    .then(res => res.json())
-    .then(data => {setAllParks(data.data)});
-  }, []);
+  //   .then(data => {setAllParks(data.data)});
+  // }, []);
 
   const value = { 
     parkDetails, 
@@ -40,7 +43,8 @@ const App = () => {
           <AppContext.Provider value={value}> 
           <Routes>
             <Route path='/' element={<HomePage />} ></Route>
-            <Route path='/park/name: name' element={< ParkResults />} ></Route>
+            <Route path='/park/:name' element={< ParkResults />} ></Route>
+            <Route path='/Resources' element={<Resources />} ></Route>
           </Routes>
           </AppContext.Provider >
         </Router>

@@ -1,0 +1,52 @@
+#resourceBody{
+    display: flex;
+    margin: 0;    
+    background-image: url("https://www.fs.usda.gov/Internet/FSE_MEDIA/stelprd3838019.jpg");
+    /* width: 100vw; */
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    resize: 'contain';
+    white-space: 50px;
+    align-items: center;
+    
+    
+}
+
+/* #imgSrc1{
+    width: 100px;
+} */
+.imagewidth{
+    width: 400px;
+    
+}
+
+#bigDiver{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    /*
+    white-space: 50px;
+    flex-wrap: nowrap;
+    */
+    
+}
+
+.footer{
+    position: absolute;
+    bottom: 5px;
+    color: white;
+    font-size: 20px;
+}
+
+#footerFont{
+    color: white;
+    font-size: 20px;
+}
+
+#resourceHeader{
+    display: flex;
+    top: 5px;
+
+}

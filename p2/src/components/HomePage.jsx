@@ -6,73 +6,57 @@ import {
   useNavigate,
 } from "react-router-dom";
 import React, { useState, useEffect, useContext } from "react";
-import "../css/App.css";
+import "../css/HomePage.css";
 import { AppContext } from "../AppContext";
-import "../css/ParkDetails.css";
 import { ParkResults } from "./ParkResults";
 
 export const HomePage = () => {
-  const { allParks, setAllParks } = useContext(AppContext);
-  const [filteredData, setFilteredData] = useState([{}]);
-  const [search, setSearch] = useState("");
-  let navigate = useNavigate();
+  const { allParks, setAllParks,  parkDetails, setparkDetails  } = useContext(AppContext);
+  const [filteredData, setFilteredData] = useState([]);
 
-  // const onKeyDown = (event) => {
-  //   if (event.key === 'Enter') {
-  //     setSearch(event.target.value);
-  //     console.log(search);
-  //   }
-  // }
 
-  // for(let park of search) {
-  //   if (park.parkId.toString() === id) {
-  //     setSearch(park)
-  //   }
-  // }
   const handlefilter = (event) => {
     const searchWord = event.target.value;
     const newFilter = allParks.filter((value) => {
-      return value.fullName.toLowerCase().includes(searchWord.toLowerCase());
+      return value.fullName.toLowerCase().startsWith(searchWord.toLowerCase());
     });
     setFilteredData(newFilter);
   };
   return (
     <div>
-      {console.log(allParks)}
+      {/* {console.log(allParks)} */}
       <nav className="sidebar">
 
       </nav>
-      <div>
+      <div className="content">
         <h1 id="h1">National Parks</h1>
-        <div className="search">
-          <div className="searchInputs">
+        <div className="wrapper">
+          <div className="searchBar">
             <input
-              className="searchBar"
+              className = "searchInput"
               type="text"
               placeholder="Search for a National Park!"
               onChange={handlefilter}
             />
-            <div className="searchIcon">?</div>
-          </div>
-          {filteredData.length != 0 && (
-            <div className="dataResult">
+            <div className = "autoBoxRollOut">
               {filteredData.map((data) => {
                 return (
-                  <a className="dataIcon" key={data.id}>
-                    <p
-                      onClick={() => {
-                        <ParkResults />;
-                      }}
-                    >
-                      {data.fullName}
-                    </p>
-                  </a>
+                  <li className="dataResult">
+                    <Link key={data.id} to={`/park/${data.fullName}`}>
+                      <div onClick={() => setparkDetails(
+                        data
+                      )}>
+                        {data.fullName}
+                      </div>
+                    </Link>
+                  </li>
                 );
               })}
             </div>
-          )}
-        </div>
+          </div>
+        </div> 
       </div>
-    </div>
+      <Link to="/Resources">Additional Resources </Link> {'add syling, box, etc...'}
+    </div>    
   );
 };
