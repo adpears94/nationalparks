@@ -9,16 +9,21 @@
     resize: 'contain';
     white-space: 50px;
     align-items: center;
-    
-    
+    flex-direction: column;   
 }
 
-/* #imgSrc1{
-    width: 100px;
-} */
+#resourceHeader{
+    display: flex;
+    top: 5px;
+    padding-bottom: 50px;
+    font-size: 30px;
+    color: white;
+
+}
+
 .imagewidth{
     width: 400px;
-    
+    color: white; 
 }
 
 #bigDiver{
@@ -26,11 +31,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    /*
-    white-space: 50px;
-    flex-wrap: nowrap;
-    */
-    
+    color: white;
+    background-color: white, 0.2;
+    column-gap: 100px; 
 }
 
 .footer{
@@ -42,11 +45,8 @@
 
 #footerFont{
     color: white;
-    font-size: 20px;
-}
-
-#resourceHeader{
+    font-size: 50px;
     display: flex;
-    top: 5px;
-
+    padding-top: 120px;
 }
+

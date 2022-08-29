@@ -15,6 +15,18 @@ export const ParkResults = () => {
   {
     console.log(parkDetails);
   }
+//  function initMap() {
+//   var map = new google.maps.Map(document.getElementById('map'), {
+//     center: {lat: parkDetails.latitude, lng: parkDetails.longitude},
+//     zoom: 10
+//   });
+//   var marker = new google.maps.Marker({
+//     position: {lat: parkDetails.latitude, lng: parkDetails.longitude},
+//     map: map
+//   });
+//  }
+//  window.initMap = initMap;
+
   return (
     // Map api to display results here...
     // Apply style
@@ -35,6 +47,11 @@ export const ParkResults = () => {
               alt={image.altText}
             />
           ))}
+          <div>
+          {/* <script async
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_5-_Mphz3hi3ORgXope5VkMoyAyYXp28&callback=initMap" >
+          </script> */}
+
         </div>
         
         <div className="parkDetails">          
@@ -44,9 +61,9 @@ export const ParkResults = () => {
                 return <p>{activity.name}</p>;
               })}
             </li>
+            
            </ul>
         <div>
-       
           <p>Monday: {parkDetails.operatingHours[0].standardHours.monday}</p>
           <p>Tuesday: {parkDetails.operatingHours[0].standardHours.tuesday}</p>
           <p>Wednesday: {parkDetails.operatingHours[0].standardHours.wednesday}</p>
@@ -64,6 +81,7 @@ export const ParkResults = () => {
       <Link to="/">Home </Link> {"add syling, box, etc..."}
       <Link to="/Resources/">Additional Resources </Link>{" "}
       {"add syling, box, etc..."}
+      </div>
     </>
   );
 };

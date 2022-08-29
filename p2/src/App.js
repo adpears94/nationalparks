@@ -42,9 +42,9 @@ const App = () => {
         <Router>
           <AppContext.Provider value={value}> 
           <Routes>
-            <Route path='/' element={<HomePage />} ></Route>
-            <Route path='/park/:name' element={< ParkResults />} ></Route>
-            <Route path='/Resources' element={<Resources />} ></Route>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/park/:name' element={< ParkResults />} />
+            <Route path='/Resources' element={<Resources />} />
           </Routes>
           </AppContext.Provider >
         </Router>
