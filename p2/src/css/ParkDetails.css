@@ -1,13 +1,17 @@
 .background {
     background-color: #b87171;
-    display: flex;
-    flex-direction: column;
+    background-image: url("https://variety.com/wp-content/uploads/2022/03/OurGreatNationalParks_Season1_Episode1_00_48_17_20.png?w=681&h=383&crop=1");
+    background-image: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
 }
 
 .searchInputs {
-    margin-top: 105px;
     display: flex;
-    width: 100px
+    flex-direction: row;
+    margin-top: 105px;
+    width: 500px;
+    border-radius: 8px;
 }
 
 .search {
@@ -17,8 +21,7 @@
     border-radius: 5px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
-    font-size: 18px;
-    padding: 15px;
+    font-size: 18px;    
     width: 500px;
     height: 30px;
 }
@@ -48,7 +51,7 @@ input:focus {
 }
 
 .dataResult::-webkit-scrollbar {
-    display: none;
+  
 }
 
 .dataResult .dataItem {

@@ -9,11 +9,11 @@ export const ParkDetails = () => {
   
   return(
     
-    <div>
+    <Container>
       <h1>National Parks</h1>
      <div>
         {allParks.map()}
       </div> 
-    </div>
+    </Container>
   )
 }

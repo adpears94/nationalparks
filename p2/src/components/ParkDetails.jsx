@@ -34,14 +34,13 @@ const handlefilter = (event) => {
     {console.log(allParks)}
     <div className='background'>
       <h1>National Parks</h1>
-      <div className="search">
+      <div>
         <div className="searchInputs">
-          <input type='text' 
+          <input  type='text' 
             placeholder='Search for a National Park!' 
             onChange={handlefilter}
           />
           <div className="searchIcon">?</div>
-          
         </div>
         {filteredData.length != 0 && (
         <div className="dataResult">
@@ -50,14 +49,11 @@ const handlefilter = (event) => {
               <a  className='dataIcon'  key= {data.id}> 
                 <p>{data.fullName}</p> 
               </a>
-
             )
           })}
-        </div>
-)}
+        </div>)}
       </div>
-    </div>
-      
+    </div>      
     </>
   )
 }
