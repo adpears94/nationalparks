@@ -2,7 +2,7 @@ import './css/App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import React, { useState, useEffect,  useContext } from 'react';
 import { AppContext } from './AppContext';
-import { ParkDetails } from './components/ParkDetails';
+import { HomePage } from './components/HomePage';
 import { ParkResults } from './components/ParkResults';
 
 
@@ -34,13 +34,12 @@ const App = () => {
     setAllParks 
   };
 
-
   return (
     <>
         <Router>
           <AppContext.Provider value={value}> 
           <Routes>
-            <Route path='/' element={<ParkDetails />} ></Route>
+            <Route path='/' element={<HomePage />} ></Route>
             <Route path='/park/name: name' element={< ParkResults />} ></Route>
           </Routes>
           </AppContext.Provider >
