@@ -24,7 +24,7 @@ const App = () => {
     fetch('https://developer.nps.gov/api/v1/parks?limit=500&api_key=9xMD2mRaCUV6aEHYNCvehL3PQuHfG3GNTaEhsgJx')
     //fetch('https://1a675692-03cd-4f75-aee2-473321d089b7.mock.pstmn.io')
     .then(res => res.json())
-    .then(data => {setAllParks(data)});
+    .then(data => {setAllParks(data.data)});
   }, []);
 
   const value = { 
