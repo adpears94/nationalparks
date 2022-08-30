@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import React, { useState, useEffect,  useContext } from 'react';
+import React, { useContext } from 'react';
 import '../css/App.css';
 import { AppContext } from '../AppContext';
 import { ParkResults } from './ParkResults';
@@ -8,7 +8,7 @@ import { ParkResults } from './ParkResults';
 import '../css/ParkDetails.css'
 
 export const ParkDetails = () => {
-    const { allParks, setAllParks, parkDetails, setParkDetails } = useContext(AppContext);
+    const { allParks } = useContext(AppContext);
   
   return( 
      <div>

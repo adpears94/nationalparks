@@ -1,0 +1,57 @@
+#page-body{
+    display: flex;
+    margin: 0;    
+    background-image: url("https://ychef.files.bbci.co.uk/976x549/p07n19vr.jpg");
+    background-size: cover;
+    height: 94vh;
+    width: 100vw;
+    resize: 'contain';
+    white-space: 50px;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+.Header{
+    display: flex;
+    text-align: center;
+    font-size: 80px;
+    color: white;
+    margin-top: 5%;
+    background-color: rgba(0,0,0,.6);
+    border-radius: 20px;
+}
+
+#aboutHeader{
+    display: flex;
+    margin: 10px;
+}
+
+.internalHeader{
+    display: flex;
+}
+
+.para{
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin: 1%;
+}
+
+.internalpara{
+    display: flex;
+    padding-left: 5%;
+}
+
+.aboutContent{
+    margin: 10%;
+    margin-top: 6%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,.7);
+    color: #fff;
+    border-radius: 20px;
+    row-gap: 100px;
+}
+

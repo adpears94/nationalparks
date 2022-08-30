@@ -1,0 +1,68 @@
+.images{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+.imageandCap{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 400px;
+    font-size: 12px;
+}
+.mainImage{
+    max-height:350px;
+    max-width: 400px;
+}
+.description{
+    width:30vw;
+    font-size: 18px;
+}
+.smallImagesDiv{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 300px;
+    height: 400px;
+    
+    padding: 10px;
+}
+.smallImage{
+    max-height: 100px;
+    margin: 10px;
+    
+}
+.parkDetails{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(252, 249, 249, 0.3);
+    flex-wrap: wrap;
+    font-size: 18px;
+}
+
+.activities{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    list-style: none;
+    overflow-y: scroll; 
+
+}
+.list{
+    display: flex;
+    list-style: none;
+    padding-left: 20px;
+}
+.hours{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(252, 249, 249, 0.3);
+    flex-wrap: wrap;
+    font-size: 18px;
+}
+.day{
+    display: flex;
+    list-style: none;
+    padding-left: 20px;
+
+}

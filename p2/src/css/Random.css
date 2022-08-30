@@ -1,10 +1,10 @@
-#resourceBody{
+#randomBody{
     display: flex;
     margin: 0;    
-    background-image: url("https://www.fs.usda.gov/Internet/FSE_MEDIA/stelprd3838019.jpg");
+    background-image: url("https://i.ytimg.com/vi/fKz-UHvfZHE/maxresdefault.jpg");
     /* width: 100vw; */
     background-size: cover;
-    height: 94.2vh;
+    height: 93vh;
     width: 100vw;
     resize: 'contain';
     white-space: 50px;
