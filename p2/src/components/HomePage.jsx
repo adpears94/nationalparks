@@ -58,8 +58,8 @@ export const HomePage = () => {
               {filteredData.map((data) => {
                 return (
                   <li className="dataResult">
-                    <Link key={data.id} to={`/park/${data.fullName}`}>                      
-                      <div onClick={() => setparkDetails(data)} >
+                      <Link to={`/park/${data.fullName}`}>                      
+                      <div key={data.id} className="dropDownList" onClick={() => setparkDetails(data)} >
                         {data.fullName}
                       </div>                    
                     </Link>
@@ -69,7 +69,11 @@ export const HomePage = () => {
               })}
             </div>
             <Link to={`/random`}>
-              <button className="randomButton" onClick={ setparkDetails(random)}> Click Here to Start a Random Adventure </button>
+              
+                <div className="btn btn-one"  >
+                      <span className="box-1" onClick={ setparkDetails(random)}> Or Click Here to Start a Random Adventure </span>
+                  </div>              
+                
             </Link>
            
           </div>

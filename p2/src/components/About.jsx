@@ -26,7 +26,7 @@ export const About = () => {
         <div className="para">
           <h1 className='internalHeader'> Our Mission </h1>
           <p className='internalpara'> Our mission is to provide a way to navigate the extensive National Park system. Our hope is that this will allow outdoor enthusiasts 
-              the ability to explore the basic information of each park, highlighting activities offered. 
+              the ability to explore the basic information of each park, highlighting activities offered. If this gets you into a Park, Mission Success!
           </p>
         </div>
         <div className="para">
