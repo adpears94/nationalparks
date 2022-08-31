@@ -1,23 +1,24 @@
-import { useContext, useState, useEffect } from "react";
+import  { useContext, useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
-  Routes,
-  Route,
-  Link,
   useNavigate,
   useParams,
 } from "react-router-dom";
-import styled from "styled-components";
 import { AppContext } from "../AppContext";
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
 import "../css/ResultsPage.css";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
 
-export const ParkResults = () => {
+export const RandomResults = () => {
   const data = window.localStorage.getItem("MY_APP_STATE");
   const { id } = useParams();
-  const { parkDetails, mainImage, setMainImage } = useContext(AppContext);
+  const { parkDetails, mainImage, setMainImage, setparkDetails, allParks } = useContext(AppContext);
+
+    useEffect(() => {
+        const random = allParks[Math.floor(Math.random() * allParks.length)];
+        setparkDetails(random);
+    }, []);
+
+
+
 
   let navigate = useNavigate();
   let activityArr = [];
