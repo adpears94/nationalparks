@@ -12,8 +12,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 export const Resources = () => {
     return (
         // Apply style
-        <>
-      <body id='resourceBody'>
+      <div id='resourceBody'>
         
         <header id="resourceHeader">
           <div id="aboutHeader"> Useful Resources </div>
@@ -68,8 +67,6 @@ export const Resources = () => {
           
         </footer>
                 
-        </body>
-        
-      </>
+        </div>
     )
 }

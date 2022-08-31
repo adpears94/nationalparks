@@ -8,77 +8,95 @@ import {
 import React, { useState, useEffect, useContext } from "react";
 import "../css/HomePage.css";
 import { AppContext } from "../AppContext";
-
+import styled from "styled-components";
 import { ParkResults } from "./ParkResults";
 import { NavBar } from "./NavBar";
 import "../css/NavBar.css";
 
 export const HomePage = () => {
-  const { allParks, setAllParks, parkDetails, setparkDetails } = useContext(AppContext);
-  const [filteredData, setFilteredData] = useState([]); 
-  const [fullName, setFullName] = ("");
-  let random = allParks[Math.floor(Math.random() * allParks.length +1)];
+  const { allParks, setAllParks, parkDetails, setparkDetails } =
+    useContext(AppContext);
+  const [filteredData, setFilteredData] = useState([]);
+  const { randomPark, setRandomPark } = useState([]);
 
-  const handlefilter = (event) => {      
+
+
+  //let random = allParks[Math.floor(Math.random() * allParks.length)]
+  
+  // const [fullName, setFullName] = ("");
+
+  //    const Random = async () => {
+  //     let random = allParks[Math.floor(Math.random() * allParks.length +1)];
+  //     setparkDetails(random);
+
+  // }
+
+  const handlefilter = (event) => {
     const searchWord = event.target.value;
-    
-    if (searchWord !== "") {
-      const newFilter = allParks.filter((value) => {
-        return value.fullName
-          .toLowerCase()
-          .startsWith(searchWord.toLowerCase());
-      });
-      setFilteredData(newFilter);
-    } else {
-      setFilteredData(allParks);
-    }
-    setFullName("");
+
+    //   if (searchWord !== "") {
+    const newFilter = allParks.filter((value) => {
+      return value.fullName.toLowerCase().startsWith(searchWord.toLowerCase());
+    });
+    setFilteredData(newFilter);
+    //   } else {
+    //     setFilteredData(allParks);
+    //   }
+    //   // setFullName("");
   };
+  if (allParks.length === 0) {
+    return (
+      <div className="lds-ripple">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <div className="content">
+          <h1 id="h1">National Parks</h1>
+          <div className="wrapper">
+            <div className="searchBar">
+              <input
+                className="searchInput"
+                type="text"
+                placeholder="Search for a National Park Near You"
+                onKeyUp={handlefilter}
+              />
 
-  const resetInputField = () => {
-    setparkDetails("");
-  }
-
-  return (
-    <div>
-       {/* {console.log(random)}  */}
-
-      <div className="content">
-        <h1 id="h1">National Parks</h1>
-        <div className="wrapper">
-          <div className="searchBar">
-            <input
-              className="searchInput"
-              type="text"
-              placeholder="Search for a National Park Near You"
-              onKeyUp={handlefilter}                   
-            />
-           
-            <div className="autoBoxRollOut">
-              {filteredData.map((data) => {
-                return (
-                  <li className="dataResult">
-                      <Link to={`/park/${data.fullName}`}>                      
-                      <div key={data.id} className="dropDownList" onClick={() => setparkDetails(data)} >
-                        {data.fullName}
-                      </div>                    
-                    </Link>
-                    
-                  </li>                  
-                );
-              })}
+              <div className="autoBoxRollOut">
+                {filteredData.map((data) => {
+                  return (
+                    <li key={data.id} className="dataResult">
+                      <Link
+                        to={`/park/${data.fullName}`}
+                        className="dataResult"
+                      >
+                        <p onClick={() => setparkDetails(data)}>
+                          {data.fullName}
+                        </p>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </div>
+              <Link to={`/random`}>
+                <div className="btn btn-one">
+                  <p className="box-1" onClick={setparkDetails(allParks[Math.floor(Math.random() * allParks.length)])}
+                    >
+                   
+                    {" "}
+                    Or Click Here to Start a Random Adventure{" "}
+                  </p>
+                </div>
+              </Link>
             </div>
-            <Link to={`/random`}>
-              
-                <div className="btn btn-one"  >
-                      <span className="box-1" onClick={ setparkDetails(random)}> Or Click Here to Start a Random Adventure </span>
-                  </div>              
-                
-            </Link>
-           
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
+// setparkDetails(allParks[Math.floor(Math.random() * allParks.length)])

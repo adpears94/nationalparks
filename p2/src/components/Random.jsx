@@ -6,7 +6,7 @@ import "../css/Random.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export const Random = async () => {
-  const { allParks, setparkDetails } = useContext(AppContext);
+  const { allParks, parkDetails, setparkDetails } = useContext(AppContext);
   let random = allParks[Math.floor(Math.random() * allParks.length + 1)];
   await setparkDetails(random);
   return (

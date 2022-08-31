@@ -12,9 +12,10 @@ body{
     border: 0;
     border-radius: 5px;
     font-size: 18px;   
-    width: 100vw; 
- 
+    width: 100vw;  
+    height: 93vh;
 }
+
 #h1 {
     text-align: center;
     font-weight: bolder;
@@ -41,36 +42,40 @@ body{
     outline:none;
     border: none;
     border-radius: 50px;
-    font-size: 18px;
+    font-size: large;
     padding: 10px;
 }
 .autoBoxRollOut{
-    background: #fff;
+    background: rgba(240, 233, 233, 0.192);
     width: 500px;
     max-height: 280px;
     overflow-y: auto;
     border-radius: 5px;
     text-decoration: none;
+    padding: 0px;
 }
+
 .autoBoxRollOut :hover{
-    background:#898989
+    background:#898989;
+    color:rgba(240, 233, 233 )
 }
 ::-webkit-scrollbar{
     display: none;
 }
 .dataResult {
-    color: rgb(0, 182, 9);
+    color: #FF00FF;
     text-decoration: none;
     list-style: none;
     cursor: default;
     border-radius: 3px;
-    text-decoration-color: aqua;
-   
 }
-.dropDownList:link{
-    text-decoration: none;
-    text-underline-position: none;
+
+a:link, :hover, :visited, :active{
+    text-decoration: none;  
 }
+
+
+
 .sidebar{
     height: 100vh;
     width:0;
@@ -80,9 +85,9 @@ body{
     position: fixed;
 }
 
-.randomButton{
+/* .randomButton{
    
-}
+} */
 @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
 div[class*=box] {
     height: 33.33%;
@@ -145,4 +150,53 @@ div[class*=box] {
   .btn-one:hover::after {
     opacity: 0; 
     transform: scale(0.1, 1);
+  }
+
+  .lds-ripple {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40vw;
+    height: 40vh;
+  }
+  .lds-ripple div {
+    position: absolute;
+    border: 4px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  .lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+  }
+  @keyframes lds-ripple {
+    0% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    4.9% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    5% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 72px;
+      height: 72px;
+      opacity: 0;
+    }
   }
