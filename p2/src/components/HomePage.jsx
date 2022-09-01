@@ -33,20 +33,16 @@ export const HomePage = () => {
 
   const handlefilter = (event) => {
     const searchWord = event.target.value;
-    console.log(searchWord.length)
-    if (searchWord.length > 0) {
+    console.log(searchWord)
+    if (searchWord.length !== 0) {
     const newFilter = allParks.filter((value) => {
       return value.fullName.toLowerCase().startsWith(searchWord.toLowerCase());
     });
     setFilteredData(newFilter);
   }
-  else if(searchWord.length){
+  else{
     return setFilteredData([])
   }
-    //   else {
-    //     setFilteredData(allParks);
-    //   }
-    //   // setFullName("");
   };
   if (allParks.length === 0) {
     return (
@@ -60,7 +56,7 @@ export const HomePage = () => {
     return (
       <div>
         <div className="content">
-          <h1 id="h1">National Parks</h1>
+          <h1 id="h1">Start your adventure...</h1>
           <div className="wrapper">
             <div className="searchBar">
               <input
@@ -86,8 +82,9 @@ export const HomePage = () => {
                   );
                 })}
               </div>
-              <Link to={`/random`}>
-                <div className="btn btn-one">
+              <Link to={`/random`}
+                className="btn btn-one dataResult happy">
+                <div  className="box-1">
                   <p className="box-1">
                    
                     {" "}

@@ -1,26 +1,23 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link,
-  useNavigate,
-} from "react-router-dom";
 import React, { useState, useEffect, useContext } from "react";
 import "../css/HomePage.css";
-import { AppContext } from "../AppContext";
-import { ParkResults } from "./ParkResults";
-import { NavBar } from "./NavBar";
 import "../css/NavBar.css";
 import "../css/About.css";
 
 export const About = () => {
+
+
+
   return (
+    <>
 
     <div id="page-body">
       <div className="App"> 
     </div>
  
       <h1 className="Header"> About Us </h1>
+      {/* <iframe width="500" height="400" frameborder="0" src={`https://www.bing.com/maps/embed?h=400&w=500&cp=${parkDetails.latitude}~${parkDetails.longitude}&lvl=11&typ=s&sty=h&src=SHELL&FORM=MBEDV8`} scrolling="no">
+     </iframe> */}
+     
       
       <div className="aboutContent">
         <div className="para">
@@ -44,7 +41,12 @@ export const About = () => {
           </p>
         </div>
       </div>
+      
 
     </div>
+    
+       
+    
+  </>
   );
 };

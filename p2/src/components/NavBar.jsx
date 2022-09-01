@@ -14,7 +14,7 @@ return(
             <span className="line line3"></span>
           </div>  
         <div className="logo">
-          <h1 ><a href="/">National Parks</a></h1>
+          <h1><a className="navbar-logo"  href="/">National Parks</a></h1>
         </div>
         <div className="menu-items">
           <li><a href="/">Home</a></li>

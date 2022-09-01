@@ -49,13 +49,15 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;  
 }
 
 .container {
-  max-width: 1050px;
+  display: flex;
+  flex-shrink: 1;
+  max-width: 55vw;
   width: 90%;
-  margin: auto;
+  margin: auto;  
 }
 
 .navbar {
@@ -63,7 +65,7 @@ body {
   background-color: rgb(236, 234, 234);
   box-shadow: 0 1px 4px rgb(146 161 176 / 30%);
   opacity: 100%;
-  height: 7vh;
+  height: 7vh;  
 }
 
 .nav-container {
@@ -74,6 +76,8 @@ body {
 
 .navbar .menu-items {
   display: flex;
+  position: relative;
+  z-index: 1;
 }
 
 .navbar .nav-container li {
@@ -84,7 +88,7 @@ body {
   text-decoration: none;
   color: #0e2431;
   font-weight: 500;
-  font-size: 1.2rem;
+  /*font-size: 1.2rem;*/
   padding: 0.7rem;
 }
 
@@ -95,7 +99,7 @@ body {
 .nav-container {
   display: block;
   position: relative;
-  height: 60px;
+  height: 60px;  
 }
 
 .nav-container .checkbox {
@@ -104,10 +108,11 @@ body {
   height: 32px;
   width: 32px;
   top: 20px;
-  left: 20px;
+  left: -38%;
   z-index: 5;
   opacity: 0;
   cursor: pointer;
+ 
 }
 
 .nav-container .hamburger-lines {
@@ -116,11 +121,12 @@ body {
   width: 32px;
   position: absolute;
   top: 17px;
-  left: 20px;
+  left: -38%;
   z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+ 
 }
 
 .nav-container .hamburger-lines .line {
@@ -148,13 +154,13 @@ body {
 .navbar .menu-items {
   padding-top: 120px;
   box-shadow: inset 0 0 2000px rgba(255, 255, 255, .2);
-  background-color: rgba(250, 246, 246, 0.5); 
+  background-color: rgba(250, 246, 246, 0.8); 
   height: 100vh;
   width: 40%;
-  transform: translate(-250%);
+  transform: translate(-300%);
   display: flex;
   flex-direction: column;
-  margin-left: -50px;
+  margin-left: -42%;
   padding-left: 20px;
   transition: transform 0.5s ease-in-out;
   text-align: center;
@@ -162,16 +168,17 @@ body {
 
 .navbar .menu-items li {
   margin-bottom: 1.2rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 
 .logo {
   position: absolute;
-  top: 5px;
-  right: 15px;
-  font-size: 1.2rem;
+  margin-left: 34%;
+  /* top: 5px;
+  right: 15px; */
   color: #0e2431;
+  text-align: center;
 }
 
 .nav-container input[type="checkbox"]:checked ~ .menu-items {
@@ -192,4 +199,12 @@ body {
 
 .nav-container input[type="checkbox"]:checked ~ .logo{
   display: none;
+}
+
+.container  logo {
+  font-size: 100pt;
+}
+
+.navbar-logo {
+  font-size: 40pt;
 }

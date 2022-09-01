@@ -1,5 +1,4 @@
-body{
-    
+body{    
     margin: 0;    
     background-image: url("https://media.cntraveler.com/photos/6144cf745c18454812514e86/master/w_2580%2Cc_limit/Best%2520National%2520Parks%2520in%2520the%2520US_Great%2520Smoky%2520Mountains%2520National%2520Park_GettyImages-580749949.jpg");
     
@@ -24,6 +23,8 @@ body{
     font-family: 'Snell Roundhand', Arial, sans-serif;
     font-variant: small-caps;
     font-stretch: extra-expanded;
+    color: white;
+    margin-bottom: 2%;
 }
 
 .wrapper {
@@ -44,6 +45,7 @@ body{
     border-radius: 50px;
     font-size: large;
     padding: 10px;
+    margin-bottom: 6%;
 }
 .autoBoxRollOut{
     background: rgba(240, 233, 233, 0.192);
@@ -53,17 +55,20 @@ body{
     border-radius: 5px;
     text-decoration: none;
     padding: 0px;
+   
 }
 
 .autoBoxRollOut :hover{
-    background:#898989;
-    color:rgba(240, 233, 233 )
+    background:#f70c0c2c;
+    color:rgba(240, 233, 233 );
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 ::-webkit-scrollbar{
     display: none;
 }
 .dataResult {
-    color: #FF00FF;
+    color: #f5f0f4ef;
     text-decoration: none;
     list-style: none;
     cursor: default;
@@ -199,4 +204,8 @@ div[class*=box] {
       height: 72px;
       opacity: 0;
     }
+  }
+
+.happy {
+    cursor: url('data:image/x-icon;base64,AAACAAEAICAQAAYADwDoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAWR5wAeb9pAAAAAABUrUAA////ACRUGQCzsa8ARoA5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiZmYiIiIiIiIiIiIiIiIiJmZmYiIiIiIiIiIiIiIiIiZmZmIiIiIiIiIiIiIiIiJmZmZmIiIiIiIiIiIiIiIiZmZmZiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiZmZmZmYiIiIiIiIiIiIiImZmZmZmIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiAAAiIiIiIiIiIiIiIiIiIiACIiIiIiIiIiIiIiIiIjIgAiIiIiIiIiIiIiIiIgAiIgAiIiIiIiIiIiIiIiAiAiIAIiIiIiIiIiIiIiIiIyAiACACIiIiIiIiIiInIiIiIAIiICIiIiIiIiIiIiEiIiACIiICciIiIiIiIiIiIiIiIiIiICIiIiIiIiIiIiIAAAAAIiIiIiIiIiIiIiIgAiIiIAIiISIiIiIiIiIiICAAAAICIyIiIiIiIiIiIiAAAAAAAiIiIiIiIiIiIiIgIgAAIgIiIiIiIiIiIiIiIEIAACQCIiIiIiIiIiIiIiAAAAAAAiIiIiIiIiIiIiIjAAAAAAIiIiIiIiIiIiIiEyAAAAAAIiIiIiIiIiIiIhISAAAAMCIiIiIiIiIiIiIjEicgAzUiIiIiIiIiIiIlciJRIlJyIiIiIiIiIiIiJyUScjUiUiIiIiIiL/8D////A////gH///4B///8AP///AD///gAf//4AH//+AB///gAf///A////4f///iH///ww///wED//+QAf//XAD//94cP//4Bh//8AM//+ABX//gAX//4AH//+AB///gAf//4AH//+AB///AAP//wAD//8AA//+AAf//wAH/w=='), auto; 
   }
