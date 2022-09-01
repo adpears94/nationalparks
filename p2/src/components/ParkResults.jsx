@@ -7,12 +7,10 @@ import {
   useNavigate,
   useParams,
 } from "react-router-dom";
-import styled from "styled-components";
 import { AppContext } from "../AppContext";
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
 import "../css/ResultsPage.css";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
+import "../css/HomePage.css";
+
 
 export const ParkResults = () => {
   const data = window.localStorage.getItem("MY_APP_STATE");
@@ -28,7 +26,11 @@ export const ParkResults = () => {
   //  console.log('parkDetails in parkResults', parkDetails);
   //  console.log('mainImage in parkResults', mainImage);
   return mainImage === null ? (
-    <> ...Loading... </>
+    <div className="lds-ripple">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
   ) : (
     <>
       <h1>{parkDetails.fullName}</h1>

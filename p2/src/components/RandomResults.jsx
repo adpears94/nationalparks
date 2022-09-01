@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import { AppContext } from "../AppContext";
 import "../css/ResultsPage.css";
+import "../css/HomePage.css";
 
 export const RandomResults = () => {
   const data = window.localStorage.getItem("MY_APP_STATE");
@@ -29,7 +30,11 @@ export const RandomResults = () => {
   //  console.log('parkDetails in parkResults', parkDetails);
   //  console.log('mainImage in parkResults', mainImage);
   return mainImage === null ? (
-    <> ...Loading... </>
+    <div className="lds-ripple">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
   ) : (
     <>
       <h1>{parkDetails.fullName}</h1>

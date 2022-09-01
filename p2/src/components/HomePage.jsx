@@ -33,13 +33,17 @@ export const HomePage = () => {
 
   const handlefilter = (event) => {
     const searchWord = event.target.value;
-
-    //   if (searchWord !== "") {
+    console.log(searchWord.length)
+    if (searchWord.length > 0) {
     const newFilter = allParks.filter((value) => {
       return value.fullName.toLowerCase().startsWith(searchWord.toLowerCase());
     });
     setFilteredData(newFilter);
-    //   } else {
+  }
+  else{
+    return ""
+  }
+    //   else {
     //     setFilteredData(allParks);
     //   }
     //   // setFullName("");
@@ -63,7 +67,7 @@ export const HomePage = () => {
                 className="searchInput"
                 type="text"
                 placeholder="Search for a National Park Near You"
-                onKeyUp={handlefilter}
+                onChange={handlefilter}
               />
 
               <div className="autoBoxRollOut">
