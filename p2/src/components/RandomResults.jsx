@@ -41,10 +41,11 @@ export const RandomResults = () => {
         <h1 className="h1center">{parkDetails.fullName}</h1>
         <div className="images">
           <div className="description">{parkDetails.description}
+            <div className='uframe'>
                 <iframe width="500" height="400" frameborder="0" src={`https://www.bing.com/maps/embed?h=400&w=500&cp=${parkDetails.latitude}~${parkDetails.longitude}&lvl=11&typ=s&sty=h&src=SHELL&FORM=MBEDV8`} scrolling="no">
                   </iframe>
                   <a id="dirMapLink" target="_blank" href={`https://www.bing.com/maps/directions?cp=${parkDetails.latitude}~${parkDetails.longitude}&amp;sty=h&amp;lvl=11&amp;rtp=~${parkDetails.latitude}_${parkDetails.longitude}____&amp;FORM=MBEDLD`}>Get Directions</a>
-      
+                </div>
           </div>
           <div className="imageandCap">
             <img className="mainImage" src={mainImage.url} />

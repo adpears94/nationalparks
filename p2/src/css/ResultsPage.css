@@ -50,6 +50,14 @@
     flex: 0 0 33.33%; 
     /* margin-left: 1%;     */
 }
+.uframe {
+  display:flex;
+  padding-top: 2%;
+  position: relative;
+  flex-direction: column;
+  
+
+}
 
 .parkDetails{
     display: flex;
