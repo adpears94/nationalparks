@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { AppContext } from "../AppContext";
 import "../css/Random.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 
 export const Random = async () => {
   const { allParks, parkDetails, setparkDetails } = useContext(AppContext);

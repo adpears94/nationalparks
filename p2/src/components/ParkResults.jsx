@@ -8,8 +8,13 @@ import {
   useParams,
 } from "react-router-dom";
 import { AppContext } from "../AppContext";
+
 import "../css/ResultsPage.css";
 import "../css/HomePage.css";
+
+
+import "../css/ResultsPage.css";
+
 
 
 export const ParkResults = () => {
@@ -53,18 +58,18 @@ export const ParkResults = () => {
           ))}
         </div>
       </div>
-      <div className="parkDetails">
+      <div className="hours">
         <strong>Activities:</strong>
-        <ul className="act">
+        <ul>
           <li key={parkDetails.activities.name} className="activities">
             {parkDetails.activities.map((activity) => {
               activityArr.push(activity.name);
-              // return <div className="list" >{activity.name} </div>;
-            })}
-            <div className="list">{activityArr.join(", ")} </div>
+            })}         
+            <div>{activityArr.join(', ')}</div>          
           </li>
         </ul>
       </div>
+      <p></p>
       <div className="hours">
         {" "}
         <table>

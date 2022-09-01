@@ -40,8 +40,8 @@ export const HomePage = () => {
     });
     setFilteredData(newFilter);
   }
-  else{
-    return ""
+  else if(searchWord.length){
+    return setFilteredData([])
   }
     //   else {
     //     setFilteredData(allParks);

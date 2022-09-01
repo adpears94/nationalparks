@@ -61,11 +61,12 @@
 .hours{
     display: flex;
     flex-direction: column;
-    background-color: rgba(252, 249, 249, 0.3);
-    /* background-color: #ffffff; */
+    /* background-color: rgba(252, 249, 249, 0.3); */
+    background-color: #ffffff;
     flex-wrap: wrap;
     font-size: 18px;
     padding-left: 10px;
+    width: 100%;
 }
 
 .day{
