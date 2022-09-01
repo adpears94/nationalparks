@@ -9,10 +9,9 @@ import {
 } from "react-router-dom";
 import styled from "styled-components";
 import { AppContext } from "../AppContext";
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
+
 import "../css/ResultsPage.css";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
+
 
 export const ParkResults = () => {
   const data = window.localStorage.getItem("MY_APP_STATE");
@@ -51,18 +50,18 @@ export const ParkResults = () => {
           ))}
         </div>
       </div>
-      <div className="parkDetails">
+      <div className="hours">
         <strong>Activities:</strong>
-        <ul className="act">
+        <ul>
           <li key={parkDetails.activities.name} className="activities">
             {parkDetails.activities.map((activity) => {
               activityArr.push(activity.name);
-              // return <div className="list" >{activity.name} </div>;
-            })}
-            <div className="list">{activityArr.join(", ")} </div>
+            })}         
+            <div>{activityArr.join(', ')}</div>          
           </li>
         </ul>
       </div>
+      <p></p>
       <div className="hours">
         {" "}
         <table>

@@ -8,8 +8,7 @@ import { Resources } from "./components/Resources";
 import { About } from "./components/About";
 import { NavBar } from "./components/NavBar";
 import { Random } from './components/Random';
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
+
 
 const App = () => {
   const imageData = window.localStorage.getItem("MY_APP_STATE");
