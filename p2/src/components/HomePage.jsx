@@ -84,8 +84,7 @@ export const HomePage = () => {
               </div>
               <Link to={`/random`}>
                 <div className="btn btn-one">
-                  <p className="box-1" onClick={setparkDetails(allParks[Math.floor(Math.random() * allParks.length)])}
-                    >
+                  <p className="box-1">
                    
                     {" "}
                     Or Click Here to Start a Random Adventure{" "}

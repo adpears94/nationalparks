@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { useState, useEffect, useContext } from "react";
 import { AppContext } from "./AppContext";
 import { HomePage } from "./components/HomePage";
+import { RandomResults } from "./components/RandomResults";
 import { ParkResults } from "./components/ParkResults";
 import { Resources } from "./components/Resources";
 import { About } from "./components/About";
@@ -74,7 +75,7 @@ const App = () => {
           <Routes>
             <Route exact path="/" element={<HomePage />} />
             <Route path="/park/:name" element={<ParkResults />} />
-            <Route path="/Random" element={<ParkResults />} />
+            <Route path="/Random" element={<RandomResults />} />
             <Route path="/Resources" element={<Resources />} />
             <Route path="/About" element={<About />} />
           </Routes>

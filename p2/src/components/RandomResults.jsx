@@ -1,22 +1,24 @@
-import { useContext, useState, useEffect } from "react";
+import  { useContext, useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
-  Routes,
-  Route,
-  Link,
   useNavigate,
   useParams,
 } from "react-router-dom";
-import styled from "styled-components";
 import { AppContext } from "../AppContext";
-
 import "../css/ResultsPage.css";
 
-
-export const ParkResults = () => {
+export const RandomResults = () => {
   const data = window.localStorage.getItem("MY_APP_STATE");
   const { id } = useParams();
-  const { parkDetails, mainImage, setMainImage } = useContext(AppContext);
+  const { parkDetails, mainImage, setMainImage, setparkDetails, allParks } = useContext(AppContext);
+
+    useEffect(() => {
+        const random = allParks[Math.floor(Math.random() * allParks.length)];
+        setparkDetails(random);
+    }, []);
+
+
+
 
   let navigate = useNavigate();
   let activityArr = [];
@@ -50,18 +52,18 @@ export const ParkResults = () => {
           ))}
         </div>
       </div>
-      <div className="hours">
+      <div className="parkDetails">
         <strong>Activities:</strong>
-        <ul>
+        <ul className="act">
           <li key={parkDetails.activities.name} className="activities">
             {parkDetails.activities.map((activity) => {
               activityArr.push(activity.name);
-            })}         
-            <div>{activityArr.join(', ')}</div>          
+              // return <div className="list" >{activity.name} </div>;
+            })}
+            <div className="list">{activityArr.join(", ")} </div>
           </li>
         </ul>
       </div>
-      <p></p>
       <div className="hours">
         {" "}
         <table>
